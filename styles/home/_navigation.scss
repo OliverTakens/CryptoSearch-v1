@@ -1,0 +1,78 @@
+@use "../abstracts/abstracts" as *;
+
+nav{
+    height: 5rem;
+    width: 100%;
+    background-color: $main-color;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    @media (max-width: 85em) {
+        padding: 0 1rem;
+    }
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.logo{
+    color: white;
+    font-weight: 500;
+
+    @media (max-width: 36em) {
+        font-size: 1.1rem;
+    }
+}
+
+.navigationLink{
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    transition: all 0.2s;
+
+    &:hover{
+        color: $main-color-lighter;
+    }
+
+    @media (max-width: 48em) {
+        display: none;
+    }
+}
+
+.navigationSearchBox{
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navigationSearch{
+    outline: 0;
+    border: 0;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    padding: 0.5rem;
+    display: block;
+}
+
+#navigationSearchButton{
+    outline: 0;
+    border: 0;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: block;
+    color: white;
+    font-size: 1rem;
+    background-color: $button-color;
+}

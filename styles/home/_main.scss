@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+}
+
+/** 1360px oder schmaler */
+$breakpoint-xxl: 85em;
+/** 1200px oder schmaler */
+$breakpoint-lg: 75em;
+/** 992px oder schmaler */
+$breakpoint-md: 62em;
+/** 768px oder schmaler */
+$breakpoint-sm: 48em;
+/** 576px oder schmaler */
+$breakpoint-xs: 36em;
+
+
+/** Breakpoints */
+@media (max-width: 85em) {}
+@media (max-width: 75em) {}
+@media (max-width: 62em) {}
+@media (max-width: 48em) {}
+@media (max-width: 36em) {}

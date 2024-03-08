@@ -1,0 +1,112 @@
+@use "../abstracts/abstracts" as *;
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.popup{
+    width: 50rem;
+    height: fit-content;
+    position: fixed;
+    z-index: 300;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 0.5rem;
+    // overflow: hidden;
+    padding: 1.5rem;
+
+    @media (max-width: 48em) {
+        width: auto;
+        height: auto;
+        max-height: 85vh;
+        max-width: 90vw;
+        overflow-x: auto;
+    }
+}
+
+.closeButton{
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.cryptoContainer {
+    margin-top: 1rem;
+}
+
+.cryptoPrice {
+    text-align: left;
+    margin-right: 1.5rem;
+    width: 10rem;
+    float: left;
+
+    @media (max-width: 48em) {
+        margin-bottom: 1rem;
+        float: none;
+    }
+}
+
+.priceValue {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; 
+    width: 100%;
+}
+
+.priceChanges .change {
+    display: block;
+    color: #666; /* Farbe der Prozentsätze */
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.cryptoDetails {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 48em) {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.detailItem {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    width: 10rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.297);
+
+    @media (max-width: 48em) {
+        width: 100%;
+    }
+}
+
+.detailTitle {
+    font-size: 14px;
+    color: #999; /* Farbe des Detail-Titels */
+    display: block;
+}
+
+.detailValue {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}

@@ -1,0 +1,77 @@
+@use "../abstracts/abstracts" as *;
+
+footer{
+    background-color: $main-color-darker;
+    padding: 5rem 0;
+
+    @media (max-width: 85em) {
+        padding: 5rem 1rem;
+    }
+}
+
+.footerFlex{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 5rem;
+
+    @media (max-width: 62em) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    @media (max-width: 36em) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.footerBox{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    @media (max-width: 36em) {
+        align-items: center;
+    }
+}
+
+.footerLogo{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 62em) {
+        font-size: 1.5rem;
+    }
+}
+
+.footerText{
+    color: $text-color;
+}
+
+.footerLinksHeading{
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-bottom: 1.5rem;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: $text-color;
+    padding: 0.5rem 0rem;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        color: white;
+        border-bottom: 1px solid white;
+    }
+}
+
+.copyright{
+    margin-top: 1rem;
+    text-align: center;
+    color: $text-color;
+}

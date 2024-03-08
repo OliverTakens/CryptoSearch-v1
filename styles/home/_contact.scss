@@ -1,0 +1,50 @@
+@use "../abstracts/abstracts" as *;
+
+.contact{
+    background-color: $main-color-dark;
+    padding: 5rem 0;
+}
+
+.contactFlex{
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: 36em) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contactBox{
+    width: 33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+
+    @media (max-width: 36em) {
+        margin-bottom: 2rem;
+    }
+}
+
+.contactIcon{
+    font-size: 2rem;
+    background-color: $button-color;
+    padding: 0.7rem;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.contactHeading{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.contactInfo{
+    color: $text-color;
+}

@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# SASS source files
+# sass/
+
+# Build directories
+# dist/
+
+# Javascript
+
+# Environment specific files
+.env
+
+# IDE specific files
+.idea/
+*.sublime-workspace
+*.sublime-project
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db

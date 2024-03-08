@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoSearch</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="navigation">
+                <div class="logoBox">
+                    <h2 class="logo">CryptoSearch</h2>
+                </div>
+                <div class="navigationLinksBox">
+                    <a href="./index.html#" class="navigationLink">Home</a>
+                    <a href="./index.html#market" class="navigationLink">Market</a>
+                    <a href="./index.html#tokensearch" class="navigationLink">TokenSearch</a>
+                    <a href="./index.html#contact" class="navigationLink">Contact</a>
+                </div>
+                <div class="navigationSearchBox">
+                    <input type="text" name="navigationSearch" id="navigationSearch" placeholder="Token Name..">
+                    <button id="navigationSearchButton">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <div class="headerContent">
+                <div class="headerText">
+                    <h1 class="headerHeading">Realtime <span>Cryptosearch</span> <br> Cryptocurrency analysis</h1>
+                    <p class="headerInfo">Use our powerful search function to find the latest data and comprehensive analysis of your favorite cryptocurrencies. Discover real-time price movements, market capitalizations and trend analysis to help you better understand the crypto market and make informed investment decisions.</p>
+                    <a href="./index.html#tokensearch" class="headerButton">Search Now <i class='bx bx-chevron-right'></i></a>
+                </div>
+                <div class="headerImages">
+                    <img class="headerImage" src="./images/header.png" alt="Charts on different Devices" loading="lazy">
+                </div>
+            </div>
+            <div class="headerCoins">
+
+            </div>
+        </div>
+    </header>
+
+    <section class="market" id="market">
+        <div class="container">
+            <h2 class="marketHeading">Market leader at a glance</h2>
+            <p class="marketSubheading">Immerse yourself in the world of the leading cryptocurrencies with current prices, market capitalizations and trends. Gain detailed insights into the performance of the market giants and discover which coins are currently shaping the crypto landscape.</p>
+
+            <div class="tableContainer">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Coin Name</th>
+                        <th>Symbol</th>
+                        <th>Price($)</th>
+                        <th>Marketcap</th>
+                        <th>Trend(%)</th>
+                    </tr>
+                    </thead>
+                    <tbody id="marketTableContent">
+                    <!-- <tr id="bitcoin">
+                        <td>Bitcoin (BTC)</td>
+                        <td><img class="marketImage" src="./images/bitcoin.png" alt=""></td>
+                        <td>$42542.25</td>
+                        <td>$725,354M</td>
+                        <td class="up-trend">02.25%</td>
+                    </tr> -->
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="marketHeading" id="tokensearch">Find your crypto: Detailed search</h2>
+            <p class="marketSubheading">Our targeted search function gives you instant access to detailed data and analysis on every cryptocurrency. Whether you're looking for price developments, market capitalization or specific trends, discover accurate and up-to-date information to help you make informed decisions in the crypto market.</p>
+            <div class="marketSearch">
+                <input type="text" name="marketInput" id="marketInput" placeholder="Coin Name..">
+                <button id="marketButton">Search</button>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contactFlex">
+                <div class="contactBox">
+                    <i class='bx bx-current-location contactIcon'></i>
+                    <h3 class="contactHeading">Head Office</h3>
+                    <p class="contactInfo">26122 Oldenburg</p>
+                </div>
+                <div class="contactBox">
+                    <i class='bx bx-envelope contactIcon' ></i>
+                    <h3 class="contactHeading">Support</h3>
+                    <p class="contactInfo">oliver.takens@icloud.com</p>
+                </div>
+                <div class="contactBox">
+                    <i class='bx bx-phone contactIcon' ></i>
+                    <h3 class="contactHeading">Call Us</h3>
+                    <p class="contactInfo">View on Portfolio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footerFlex">
+                <div class="footerBox">
+                    <h4 class="footerLogo">CryptoSearch</h4>
+                    <p class="footerText">Your navigator in the crypto universe. Discover, analyze and follow the latest trends and data on your favorite cryptocurrencies.</p>
+                </div>
+                <div class="footerBox">
+                    <h4 class="footerLinksHeading">Company</h4>
+                    <a href="#" class="footerLink">Home</a>
+                    <a href="#" class="footerLink">Careers</a>
+                    <a href="#" class="footerLink">Pricing</a>
+                    <a href="#" class="footerLink">Blog</a>
+                </div>
+                <div class="footerBox">
+                    <h4 class="footerLinksHeading">Services</h4>
+                    <a href="#" class="footerLink">Trade</a>
+                    <a href="#" class="footerLink">Payment</a>
+                    <a href="#" class="footerLink">Wallets</a>
+                    <a href="#" class="footerLink">Whitepaper</a>
+                </div>
+                <div class="footerBox">
+                    <h4 class="footerLinksHeading">Product</h4>
+                    <a href="#" class="footerLink">Guides</a>
+                    <a href="#" class="footerLink">Wallets</a>
+                    <a href="#" class="footerLink">Token Sale</a>
+                    <a href="#" class="footerLink">Exchange</a>
+                </div>
+                <div class="footerBox">
+                    <h4 class="footerLinksHeading">Legal</h4>
+                    <a href="#" class="footerLink">Documentation</a>
+                    <a href="#" class="footerLink">Faq´s</a>
+                    <a href="#" class="footerLink">Privacy Policy</a>
+                    <a href="https://oliver-takens.de/imprint.html" class="footerLink">Imprint</a>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">A Portfolio Website Project | <a href="https://oliver-takens.de" class="footerLink" target="_blank">Oliver Takens</a></p>
+        </div>
+    </footer>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

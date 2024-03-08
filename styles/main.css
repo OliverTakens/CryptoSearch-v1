@@ -1,0 +1,619 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+/** 1360px oder schmaler */
+/** 1200px oder schmaler */
+/** 992px oder schmaler */
+/** 768px oder schmaler */
+/** 576px oder schmaler */
+/** Breakpoints */
+.container {
+  max-width: 85rem;
+  margin: 0 auto;
+}
+
+.d-none {
+  display: none;
+}
+
+nav {
+  height: 5rem;
+  width: 100%;
+  background-color: #263257;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+@media (max-width: 85em) {
+  nav {
+    padding: 0 1rem;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+.logo {
+  color: white;
+  font-weight: 500;
+}
+@media (max-width: 36em) {
+  .logo {
+    font-size: 1.1rem;
+  }
+}
+
+.navigationLink {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  transition: all 0.2s;
+}
+.navigationLink:hover {
+  color: #566187;
+}
+@media (max-width: 48em) {
+  .navigationLink {
+    display: none;
+  }
+}
+
+.navigationSearchBox {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#navigationSearch {
+  outline: 0;
+  border: 0;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  padding: 0.5rem;
+  display: block;
+}
+
+#navigationSearchButton {
+  outline: 0;
+  border: 0;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: block;
+  color: white;
+  font-size: 1rem;
+  background-color: #00a79d;
+}
+
+header {
+  position: relative;
+  padding-top: 7rem;
+  background-color: #2a3760;
+  height: 55rem;
+  background-image: url(../images/bitcoin__background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+@media (max-width: 85em) {
+  header {
+    padding: 7rem 1rem 0 1rem;
+  }
+}
+@media (max-width: 75em) {
+  header {
+    padding: 3rem 1rem 0 1rem;
+    height: 44rem;
+  }
+}
+@media (max-width: 48em) {
+  header {
+    height: auto;
+    padding: 3rem 1rem 3rem 1rem;
+  }
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+}
+@media (max-width: 48em) {
+  .headerContent {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.headerImages {
+  margin-top: 4rem;
+  width: 50%;
+}
+@media (max-width: 75em) {
+  .headerImages {
+    margin-top: 0;
+    width: 50%;
+  }
+}
+@media (max-width: 48em) {
+  .headerImages {
+    width: 100%;
+  }
+}
+
+.headerImage {
+  width: 100%;
+}
+
+.headerText {
+  width: 50%;
+}
+@media (max-width: 48em) {
+  .headerText {
+    width: 100%;
+  }
+}
+
+.headerHeading {
+  color: white;
+  font-weight: 400;
+  line-height: 3.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.headerHeading span {
+  color: #2ba79d;
+}
+
+.headerInfo {
+  color: #6b83a5;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
+}
+
+.headerButton {
+  background-color: #00a79d;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 1.2rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.headerButton:hover {
+  background-color: #00847b;
+  transform: translateY(-5px);
+}
+
+.headerCoins {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 75em) {
+  .headerCoins {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 36em) {
+  .headerCoins {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.headerCoin {
+  color: white;
+  font-size: 1.2rem;
+}
+@media (max-width: 36em) {
+  .headerCoin {
+    display: none;
+  }
+}
+
+.headerCoinName {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.headerDailyChange {
+  color: #da3746;
+}
+
+.headerCoinPrice {
+  font-size: 1.5rem;
+  color: #da3746;
+}
+
+.market {
+  background-color: #212c4d;
+  padding: 5rem 0;
+}
+@media (max-width: 85em) {
+  .market {
+    padding: 5rem 1rem;
+  }
+}
+
+.marketHeading {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.marketSubheading {
+  color: #6b83a5;
+  text-align: center;
+  margin: 0 auto 2rem auto;
+  max-width: 40rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #6b83a5;
+  margin-bottom: 3rem;
+  overflow-x: auto;
+}
+@media (max-width: 36em) {
+  table {
+    display: block;
+    width: 100%;
+  }
+}
+
+th, td {
+  font-size: 1.1rem;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  border-bottom: 1px solid #fff;
+}
+
+td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2156862745);
+}
+
+tr:hover {
+  background-color: rgba(245, 245, 245, 0.0705882353);
+  cursor: pointer;
+}
+
+.up-trend {
+  color: green;
+}
+
+.down-trend {
+  color: red;
+}
+
+.marketImage {
+  width: 2rem;
+}
+
+.marketSearch {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+}
+
+#marketInput {
+  padding: 1rem;
+  font-size: 1.2rem;
+  display: block;
+  border: 0;
+  outline: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  width: 20rem;
+}
+@media (max-width: 36em) {
+  #marketInput {
+    width: auto;
+  }
+}
+
+#marketButton {
+  font-size: 1.2rem;
+  padding: 1rem 1rem;
+  display: block;
+  border: 0;
+  outline: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: #00a79d;
+  cursor: pointer;
+}
+
+.contact {
+  background-color: #212c4d;
+  padding: 5rem 0;
+}
+
+.contactFlex {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 36em) {
+  .contactFlex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contactBox {
+  width: 33%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+}
+@media (max-width: 36em) {
+  .contactBox {
+    margin-bottom: 2rem;
+  }
+}
+
+.contactIcon {
+  font-size: 2rem;
+  background-color: #00a79d;
+  padding: 0.7rem;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contactHeading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.contactInfo {
+  color: #6b83a5;
+}
+
+footer {
+  background-color: #1e2845;
+  padding: 5rem 0;
+}
+@media (max-width: 85em) {
+  footer {
+    padding: 5rem 1rem;
+  }
+}
+
+.footerFlex {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+@media (max-width: 62em) {
+  .footerFlex {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 36em) {
+  .footerFlex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.footerBox {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+@media (max-width: 36em) {
+  .footerBox {
+    align-items: center;
+  }
+}
+
+.footerLogo {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 62em) {
+  .footerLogo {
+    font-size: 1.5rem;
+  }
+}
+
+.footerText {
+  color: #6b83a5;
+}
+
+.footerLinksHeading {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-bottom: 1.5rem;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #6b83a5;
+  padding: 0.5rem 0rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.2s ease-in-out;
+}
+.footerLink:hover {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.copyright {
+  margin-top: 1rem;
+  text-align: center;
+  color: #6b83a5;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.popup {
+  width: 50rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+  z-index: 300;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+@media (max-width: 48em) {
+  .popup {
+    width: auto;
+    height: auto;
+    max-height: 85vh;
+    max-width: 90vw;
+    overflow-x: auto;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.cryptoContainer {
+  margin-top: 1rem;
+}
+
+.cryptoPrice {
+  text-align: left;
+  margin-right: 1.5rem;
+  width: 10rem;
+  float: left;
+}
+@media (max-width: 48em) {
+  .cryptoPrice {
+    margin-bottom: 1rem;
+    float: none;
+  }
+}
+
+.priceValue {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  width: 100%;
+}
+
+.priceChanges .change {
+  display: block;
+  color: #666; /* Farbe der Prozentsätze */
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.cryptoDetails {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 48em) {
+  .cryptoDetails {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.detailItem {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  width: 10rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.297);
+}
+@media (max-width: 48em) {
+  .detailItem {
+    width: 100%;
+  }
+}
+
+.detailTitle {
+  font-size: 14px;
+  color: #999; /* Farbe des Detail-Titels */
+  display: block;
+}
+
+.detailValue {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}/*# sourceMappingURL=main.css.map */
